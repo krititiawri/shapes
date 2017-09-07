@@ -1,5 +1,5 @@
 console.log("welsome to shapes.js");
-
+// Shape constructor with get_type function 
 function Shape(get_type){
 	this.get_type = function(){
 		return this.constructor;
@@ -11,23 +11,8 @@ function Shape(get_type){
 	console.log("get");
 	console.log(get_type);
 	}
-// console.log("shape get type");
-// console.log(Shape.prototype.get_type);
 
-// Shape.prototype.get_type = function(){
-//     return this.constructor;
-//     console.log(this.constructor)
-// }
-// console.log("shape constructor get_type");
-// console.log(Shape.prototype.get_type)
-// console.log(" ")
 console.log("Hi"+Shape.prototype.constructor);
-
-
-
-
-
-
 console.log("first console");
 console.log(Shape.toString());
 var userPrototype = Object.getPrototypeOf(Shape);
@@ -56,7 +41,7 @@ console.log("For Traingle")
 console.log(Shape(testTraingle));
 console.log("instance of traingle");
 console.log(testTraingle.prototype.constructor);
-
+// Protype of traingle 
 Traingle.prototype = new Shape();
 console.log("Traingle prototype"+ Traingle);
 
@@ -92,7 +77,7 @@ console.log("square");
 console.log(testSquare.prototype = new Shape());
 testSquare.prototype = new Shape();
 console.log(Shape(testSquare));
-// cons
+// pototype of square
 
 testSquare.prototype.constructor = Square;
 console.log("Get prototype of square:")
@@ -113,7 +98,8 @@ console.log("Pentagon");
 console.log(testPentagon.prototype = new Shape());
 testPentagon.prototype = new Shape();
 console.log(Shape(testPentagon));
-// cons
+
+// protype of pentagon
 
 testPentagon.prototype.constructor = Pentagon;
 console.log("Get prototype of Pentagon:")
